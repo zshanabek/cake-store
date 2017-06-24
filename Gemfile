@@ -5,6 +5,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem	'pg',	'0.20.0'
+end
+gem 'annotate',  git: 'https://github.com/ctran/annotate_models.git'
+gem 'devise'
+gem 'paperclip'
+gem 'bootstrap-sass' 
+gem 'faker'
+gem 'will_paginate-bootstrap' 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
