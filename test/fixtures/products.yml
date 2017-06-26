@@ -2,22 +2,12 @@
 
 one:
   title: MyString
-  description: MyString
+  description: MyText
   price: 1
-  available: false
-  [default=true]: MyString
-  image: 
-  =missing.png]: MyString
   discount: 1
-  [default=0]: MyString
 
 two:
   title: MyString
-  description: MyString
+  description: MyText
   price: 1
-  available: false
-  [default=true]: MyString
-  image: 
-  =missing.png]: MyString
   discount: 1
-  [default=0]: MyString

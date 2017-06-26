@@ -2,8 +2,12 @@
 
 one:
   title: MyString
-  active: 
+  active: false
+  description: MyText
+  parent_id: 1
 
 two:
   title: MyString
-  active: 
+  active: false
+  description: MyText
+  parent_id: 1
