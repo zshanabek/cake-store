@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cstore</title>
+    <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <%= render :partial => 'nav'%>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <%= render :partial => 'hor_menu'%>
+            </div>
+            <div class="col-md-10">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
