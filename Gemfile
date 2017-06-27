@@ -12,13 +12,13 @@ end
 group :production do
   gem	'pg',	'0.20.0'
 end
-gem 'annotate',  git: 'https://github.com/ctran/annotate_models.git'
+gem 'annotate'
 gem 'devise'
-gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'will_paginate-bootstrap'
-
+gem 'jquery-rails'
+gem "paperclip", "~> 5.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use Puma as the app server
