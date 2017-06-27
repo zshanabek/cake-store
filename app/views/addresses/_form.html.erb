@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :address_title %>
+    <%= form.text_field :title, id: :address_title, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :city %>
-    <%= form.text_field :city, id: :address_city %>
+    <%= form.text_field :city, id: :address_city, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :street %>
-    <%= form.text_field :street, id: :address_street %>
+    <%= form.text_field :street, id: :address_street, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :home %>
-    <%= form.text_field :home, id: :address_home %>
+    <%= form.text_field :home, id: :address_home, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Submit', :class => 'btn btn-default' %>
   </div>
 <% end %>

@@ -1,15 +1,15 @@
 <%= form_for @category do |form|%>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :category_title %>
+    <%= form.text_field :title, id: :category_title, class:"form-control" %>
   </div>
   
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :category_description %>
+    <%= form.text_field :description, id: :category_description , class:"form-control"%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Submit', :class => 'btn btn-default' %>
   </div>
 <% end %>

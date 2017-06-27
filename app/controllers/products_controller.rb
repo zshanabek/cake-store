@@ -21,13 +21,12 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    respond_to do |format|
       if @product.save
         redirect_to @product
       else
         render :new 
       end
-    end
+
   end
 
   def destroy

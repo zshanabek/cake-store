@@ -1,3 +1,14 @@
 <h1>Edit product</h1>
 
-<%= render 'form'%>
+<div class="row">
+<div class="col-md-6">
+    <%= render 'form'%>
+</div>
+
+<div class="col-md-4">
+    <div  class="product-image">
+        <%= image_tag @product.image.url(:medium) %>
+    </div>
+</div>
+</div>
+  
