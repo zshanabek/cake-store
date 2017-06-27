@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -19,6 +23,7 @@ gem 'faker'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem "paperclip", "~> 5.0.0"
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use Puma as the app server
@@ -36,6 +41,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+<<<<<<< HEAD
+=======
+gem 'jquery'
+>>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -62,4 +71,8 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+<<<<<<< HEAD
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+=======
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+>>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7

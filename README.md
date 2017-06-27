@@ -22,4 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
 * This app for the selling cakes
+=======
+>>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7

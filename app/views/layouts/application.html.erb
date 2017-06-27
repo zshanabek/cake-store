@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 
 <head>
     <title>Cstore</title>
@@ -48,20 +47,3 @@
 </body>
 
 </html>
-=======
-  <head>
-    <title>Cstore</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-  	<% if user_signed_in? %>
-  		<p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
-  	<% end%>
-    <%= yield %>
-  </body>
-</html>
->>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
