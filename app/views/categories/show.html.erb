@@ -1,6 +1,5 @@
 <h1><%= @category.title %></h1>
 <p>     <%= @category.description %>      </p>
-<h3><%= @category.title %></h3>
     <% @category.products.in_groups_of(3,false).each do |group| %>
         <div class="row">
             <% group.each do |product| %>

@@ -20,13 +20,10 @@ class CategoriesController < ApplicationController
  
   def create
     @category = Category.new(category_params)
-
-    respond_to do |format|
-      if @category.save
-        redirect_to @category
-      else
-        render :new 
-      end
+    if @category.save
+      redirect_to @category
+    else
+      render :new 
     end
   end
 
