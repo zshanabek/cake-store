@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -41,10 +37,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-<<<<<<< HEAD
-=======
-gem 'jquery'
->>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -71,8 +63,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-<<<<<<< HEAD
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-=======
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
->>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
