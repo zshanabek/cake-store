@@ -1,0 +1,19 @@
+<h1><%= @category.title %></h1>
+<p>     <%= @category.description %>      </p>
+<h3><%= @category.title %></h3>
+    <% @category.products.in_groups_of(3,false).each do |group| %>
+        <div class="row">
+            <% group.each do |product| %>
+                <div class="col-md-4 text-block">
+                    <figure class="figure">
+                        <%= image_tag product.image.url(:medium), class:"figure-img img-fluid rounded center-block" %>
+                        <figcaption class="figure-caption text-center"> <%= link_to product.title , product_path(product) %>    </figcaption>
+                    </figure>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+
+<%= link_to 'Destroy', @category, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

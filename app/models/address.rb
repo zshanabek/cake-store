@@ -1,2 +1,3 @@
-class Address < ApplicationRecord
+class Address <  ActiveRecord::Base
+
 end

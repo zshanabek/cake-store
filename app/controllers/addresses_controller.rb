@@ -6,7 +6,7 @@ class AddressesController < ApplicationController
   def index
     @addresses = Address.all
   end
-
+  
   # GET /addresses/1
   # GET /addresses/1.json
   def show
