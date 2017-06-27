@@ -9,8 +9,21 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- 
+
+
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.product-card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    img {
+        width: 100%;
+    }
+}
+
+.product-card-meta {
+    padding: 10px;
+}
