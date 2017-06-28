@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "welcome#index"
   resources :addresses
   resources :products
-  resources :categories 
+  resources :categories
   # resources :categories do
   #   resources :products, on: :members
   # end

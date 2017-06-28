@@ -11,7 +11,7 @@
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Не пришло потвердительное письмо?", new_confirmation_path(resource_name) %><br />
+  <%= link_to "Не пришло потвердительное письмо?", new_user_confirmation_path(resource_name) %><br />
 <% end -%>
 
 
