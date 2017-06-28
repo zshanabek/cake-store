@@ -12,7 +12,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-                <li> <%= link_to "Личный кобинет", edit_user_registration_path %></li>                
+                <li> <%= link_to "Личный кабинет", edit_user_registration_path %></li>                
                 <li> <%= link_to "Выход", destroy_user_session_path, :method => 'delete' %></li>
             <% else %>
                 <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

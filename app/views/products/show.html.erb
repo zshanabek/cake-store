@@ -23,9 +23,6 @@
       </h3>
     <% end %>
 
-
-
-
 <div>
   <div class="panel panel-default">
       <div class="panel-heading">Описание</div>
@@ -38,8 +35,8 @@
  </div>
  <div>
 <% if user_signed_in? && current_user.admin?%>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Редактировать', edit_product_path(@product) %> |
+    <%= link_to 'Удалить', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
  <% end %>
  </div>
 </div>

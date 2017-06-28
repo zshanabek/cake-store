@@ -1,9 +1,8 @@
 <h1><%= @category.title %></h1>
-<p>     <%= @category.description %>      </p>
-<% if user_signed_in? && current_user.admin?%>
-<%= link_to 'Destroy', @category, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Edit', edit_category_path(@category) %> 
-
+<% if user_signed_in? and current_user.admin?%>
+<%= link_to 'Удалить', @category, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Изменить', edit_category_path(@category) %> |
+<%= link_to 'Добавить продукт', new_product_path(:cat_id => @category.id) %>
 <%end%>
     <% @category.products.in_groups_of(3,false).each do |group| %>
         <div class="row">
@@ -15,20 +14,14 @@
                         <figcaption class="figure-caption "> 
                             <%= link_to product.title , product_path(product) %>  
                         </figcaption>
-                        <h3><span class="label label-danger product-price"><%= product.price%></span></h3>
+                        <h3><span class="label label-success product-price"><%= product.price%> тг</span> </h3>
                     </div>   
                 </div>
                 </div>
             <% end %>
         </div>
     <% end %>
-<% if user_signed_in? and current_user.admin?%>
 
-
-<%= link_to 'Удалить', @category, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Изменить', edit_category_path(@category) %> |
-<%= link_to 'Добавить продукт', new_product_path(:cat_id => @category.id) %>
-<%end%>
 
 
 
