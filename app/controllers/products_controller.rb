@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_admin, except:[:index, :show]
+
 
   def index
     @categories = Category.all    
   end
-  
 
   def show
     @categories = Category.all
@@ -21,13 +22,11 @@ class ProductsController < ApplicationController
  
   def create
     @product = Product.new(product_params)
-
-      if @product.save
-        redirect_to @product
-      else
-        render :new 
-      end
-
+    if @product.save
+      redirect_to @product
+    else
+      render :new 
+    end
   end
 
   def destroy

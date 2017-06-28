@@ -1,42 +1,48 @@
 <h1><%= @product.title %></h1>
-
-<div class="col-md-4">
+<div class="row main">
+<div class="col-md-5">
     <p>
     <%= image_tag @product.image.url(:medium), class:"product-image" %>
     </p>
 </div>
-<div class="col-md-6">
-    <p>
-      <strong>Name:</strong>
+<div class="col-md-7">
+    <h4 class="product-title">
       <%= @product.title %>
-    </p>
-    
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+    </h4>
+  
+    <h5> Цена:
+    <span class="label label-success product-price">
+      <%= @product.price %> тг
+    </span>
+    </h5>
 
-    <p>
-      <strong>Price:</strong>
-      <%= @product.price %>
-    </p>
+    <% if @product.discount!=0 %>
+      <h3><span class="label label-danger">СКИДКА:
+        <%= @product.discount %> %
+        </span>
+      </h3>
+    <% end %>
 
-    <p>
-      <strong>Discount:</strong>
-      <%= @product.discount %>
-    </p>
 
-    <p>
-      <strong>Category:</strong>
-      <%= @product.category.title %>
-    </p>
 
+
+<div>
+  <div class="panel panel-default">
+      <div class="panel-heading">Описание</div>
+      <div class="panel-body">
+        <p>
+          <%= @product.description %>
+        </p>
+      </div>
+    </div>
+ </div>
+ <div>
+<% if user_signed_in? && current_user.admin?%>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
+ </div>
 </div>
 
-<% if user_signed_in? %>
-<% if current_user.admin? %>
-    <%= link_to 'Edit', edit_product_path(@product) %>
-    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Back', products_path %>
- <% end %>
- <% end %>
+ </div>
+

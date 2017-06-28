@@ -21,8 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-<<<<<<< HEAD
-* This app for the selling cakes
-=======
->>>>>>> 61e5fdfe7e95fa1ab62c6fef9842a8683cce0ca7
+* [Add] - когда добаляешь новый код
+* [Fix] - когда чинишь что-то
+* [Refactor] - когда у тебя код работает но ты изменяешь его чтобы сделать более красивым или более оптимальным
+* [Delete] - когда что-то удаляешь
+ 
