@@ -1,18 +1,16 @@
 <h1><%= @product.title %></h1>
-
+<div class="row main">
 <div class="col-md-4">
     <p>
     <%= image_tag @product.image.url(:medium), class:"product-image" %>
     </p>
 </div>
 <div class="col-md-6">
-    <p>
-      <strong>Name:</strong>
+    <h4>
       <%= @product.title %>
-    </p>
+    </h4>
     
     <p>
-      <strong>Description:</strong>
       <%= @product.description %>
     </p>
 
@@ -31,9 +29,10 @@
       <%= @product.category.title %>
     </p>
 
-</div>
+
 <% if user_signed_in? && current_user.admin?%>
-    <%= link_to 'Edit', edit_product_path(@product) %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Back', products_path %>
  <% end %>
+ </div>
+ </div>
