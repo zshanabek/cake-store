@@ -22,11 +22,21 @@ class ProductsController < ApplicationController
  
   def create
     @product = Product.new(product_params)
+<<<<<<< HEAD
     if @product.save
       redirect_to @product
     else
       render :new 
     end
+=======
+
+      if @product.save
+        redirect_to @product
+      else
+        render :new 
+      end
+
+>>>>>>> 19427de0a455bb49c962bfa54afd130ed801e40c
   end
 
   def destroy

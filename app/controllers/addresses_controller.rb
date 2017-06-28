@@ -1,6 +1,10 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
   before_action :authenticate_user!, except: [:index]
+=======
+  before_action :authenticate_user!, only: [:index]
+>>>>>>> 19427de0a455bb49c962bfa54afd130ed801e40c
 
   # GET /addresses
   # GET /addresses.json
