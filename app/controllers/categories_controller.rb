@@ -29,13 +29,8 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-<<<<<<< HEAD
       @category.destroy
       redirect_to @category  
-=======
-    @category.destroy
-    redirect_to @category    
->>>>>>> 19427de0a455bb49c962bfa54afd130ed801e40c
   end
 
   def update
