@@ -22,17 +22,6 @@ ActiveRecord::Schema.define(version: 20170627063613) do
     t.integer "user_id"
   end
 
-  create_table "cart_items", force: :cascade do |t|
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.boolean "active", default: true
@@ -46,15 +35,15 @@ ActiveRecord::Schema.define(version: 20170627063613) do
     t.string "title"
     t.text "description"
     t.integer "price"
-    t.integer "discount"
+    t.integer "discount", default: 0
     t.integer "category_id"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-    t.boolean "active"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,6 +69,7 @@ ActiveRecord::Schema.define(version: 20170627063613) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
