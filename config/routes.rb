@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # end
 
   get "/users", to: "users#index"
-  get "/show/:id", to: "users#show"
+  get "/user/:id", to: "users#show"
   
   
 
