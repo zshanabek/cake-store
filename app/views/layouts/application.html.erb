@@ -4,42 +4,19 @@
 <head>
     <title>Cstore</title>
     <%= csrf_meta_tags %>
-
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
-            <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <%= link_to "Cake Store", root_path, class:"navbar-brand" %>
-                </div>
-                <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div>
-            </nav>
-
+            <%= render :partial => 'nav'%>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-2">
-                <ul class="nav nav-pills nav-stacked">
-                    <li class=""><a href="/categories/5">Бауырсаки</a></li>
-                    <li> <a href="/categories/4">Торты</a></li>
-                </ul>
+            <div class="col-md-2">
+                <%= render :partial => 'hor_menu'%>
             </div>
-            <div class="col-lg-8 col-md-10">
+            <div class="col-md-10">
                 <%= yield %>
             </div>
         </div>

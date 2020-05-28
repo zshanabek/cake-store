@@ -1,36 +1,42 @@
+<div class="col-md-7">
 <%= form_for @product do |form|%>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :product_title %>
+    <%= form.text_field :title, id: :product_title, class:"form-control" %>
   </div>
   
-  <div class="field">
+  
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :product_description %>
+    <%= form.text_field :description, id: :product_description, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :product_price %>
+    <%= form.text_field :price, id: :product_price, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :discount %>
-    <%= form.text_field :discount, id: :product_discount %>
+    <%= form.text_field :discount, id: :product_discount, class:"form-control" %>
   </div>
 
 <div class="field">
     <%= form.label :category_id %>
- <%= form.select :category_id, Category.all.collect { |c| [ c.title, c.id ] }, include_blank: true %>
+      <%= form.select :category_id, Category.all.collect { |c| [ c.title, c.id ] },
+       include_blank: true, class:"form-control", :selected => params[:cat_id]%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image %>
     <%= form.file_field :image, id: :product_image %>
   </div>
 
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Submit', :class => 'btn btn-default' %>
   </div>
+
 <% end %>
+
+
+</div>

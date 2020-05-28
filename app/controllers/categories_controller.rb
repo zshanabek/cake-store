@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_admin, except:[:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @categories = Category.all
   end
@@ -20,19 +22,16 @@ class CategoriesController < ApplicationController
  
   def create
     @category = Category.new(category_params)
-
-    respond_to do |format|
-      if @category.save
-        redirect_to @category
-      else
-        render :new 
-      end
+    if @category.save
+      redirect_to @category
+    else
+      render :new 
     end
   end
 
   def destroy
-    @category.destroy
-    redirect_to @category    
+      @category.destroy
+      redirect_to @category  
   end
 
   def update
