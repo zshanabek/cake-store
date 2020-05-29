@@ -15,6 +15,6 @@ Category.create! id:2, title:"Торты", description: "Something"
 Category.create! id:3, title:"Роллы", description: "Something"
 
 Product.delete_all
-Product.create! title: "Banana", category_id: 1, description:"Something",  price: 0.49, active: true
-Product.create! title: "Apple", category_id: 2, description:"Something",  price: 0.29, active: true
-Product.create! title: "Carton of Strawberries", category_id: 3, description:"Something", price: 1.99, active: true
+p1 = Product.create! title: "Banana", category_id: 1, description:"Something",  price: 0.49, active: true
+p2 = Product.create! title: "Apple", category_id: 2, description:"Something",  price: 0.29, active: true
+p3 = Product.create! title: "Carton of Strawberries", category_id: 3, description:"Something", price: 1.99, active: true
